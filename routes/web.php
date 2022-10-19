@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+
 //ROTAS PARA VIEWS DE FUNCIONÁRIO
 
 Route::get('/funcionarios', [FuncionarioController::class, 'index'])->name('funcionarios.index');
@@ -28,3 +29,7 @@ Route::get('/funcionarios/create', [FuncionarioController::class, 'create'])->na
 
 Route::get('/cargos', [CargoController::class, 'index'])->name('cargos.index');
 Route::get('/cargos/create', [CargoController::class, 'create'])->name('cargos.create');
+
+Route::get('/departamentos/', [DepartamentoController::class, 'index'])->name('departamentos.index');
+Route::get('/departamentos/create', [DepartamentoController::class, 'create'])->name('departamentos.create');
+

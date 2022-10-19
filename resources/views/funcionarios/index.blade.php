@@ -4,8 +4,9 @@
 
 
 @section('conteudo')
+<div class="container bg-light p-3 rounded-2">
     <h1>Funcionários</h1>
-        <a href="{{ route('funcionarios.create') }}" class="btn btn-primary float-end mb-2 rounded-circle fs-4"><i class="bi bi-person-plus-fill"></i></a>
+        <a href="{{ route('funcionarios.create') }}" class="btn btn-primary float-end mb-2 rounded-circle fs-4  mr-5""><i class="bi bi-person-plus-fill"></i></a>
     <table class="table table-stripped">
         <thead class="table-dark">
             <tr>
@@ -20,15 +21,18 @@
         <tbody>
             @foreach ($funcionarios as $funcionario)
             <tr>
-                <td>{{ $funcionario->id }}</td>
-                <td><img src="/images/funcionarios/{{ $funcionario->foto }}" alt="{{ $funcionario->nome }}" width="80"></td>
-                <td>{{ $funcionario->nome}}</td>
-                <td>{{ $funcionario->cargo->descricao }}</td>
-                <td>{{ $funcionario->departamento->nome }}</td>
-                <td></td>
+                <td class="align-middle">{{ $funcionario->id }}</td>
+                <td class="align-middle"><img src="/images/funcionarios/{{ $funcionario->foto }}" alt="{{ $funcionario->nome }}" width="80"></td>
+                <td class="align-middle">{{ $funcionario->nome}}</td>
+                <td class="align-middle">{{ $funcionario->cargo->descricao }}</td>
+                <td class="align-middle">{{ $funcionario->departamento->nome }}</td>
+                <td class="align-middle">
+                    <button class="bg-primary m-2 rounded-1" ><i class="bi bi-pen"></i></button>
+                    <i class="container bg-danger p-2 rounded-1 bi bi-trash3"></i>
+                <td>
             </tr>
             @endforeach
         </tbody>
-
     </table>
+</div>
 @endsection

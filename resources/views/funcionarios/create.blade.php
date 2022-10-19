@@ -63,9 +63,17 @@
             </div>
             <div class="col">
                 <label for="salario" class="form-label fw-semibold">Salario </label>
-                <input type="text" name="salario" class="form-control form-control-lg bg-dark bg-opacity-10" value="" required placeholder="Somente números" maxlength="11" minlength="11">
+                <input type="text" name="salario" class="form-control form-control-lg bg-dark bg-opacity-10" value="" required placeholder="R$">
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label mt-2 fw-semibold">Foto</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="container">
+                <input class="btn btn-primary" type="submit" value="Cadastrar">
+                <input class="btn btn-danger" type="reset" value="Cancelar">
+              </div>
+            </div>
     </form>
 </div>
     

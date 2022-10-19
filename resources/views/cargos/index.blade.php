@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title','Cargos')
+@section('title','Departamentos')
 
 
 @section('conteudo')
@@ -15,12 +15,16 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($cargos as $cargo)
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="align-middle">{{ $cargo->id }}</td>
+                <td class="align-middle">{{ $cargo->descricao }}</td>
+                <td class="align-middle">
+                    <button class="bg-primary m-2 rounded-1" ><i class="bi bi-pen"></i></button>
+                    <i class="container bg-danger p-2 rounded-1 bi bi-trash3"></i>
+                <td>
             </tr>
+            @endforeach
         </tbody>
-
     </table>
 @endsection

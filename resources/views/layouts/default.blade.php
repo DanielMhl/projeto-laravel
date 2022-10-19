@@ -21,7 +21,7 @@
             <ul class="navbar-nav">
 
               <li class="nav-item px-3">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="{{ route('funcionarios.index') }}">Funcionários</a>
@@ -30,7 +30,7 @@
                 <a class="nav-link" href="{{ route('cargos.index') }}">Cargos</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#">Departamentos</a>
+                <a class="nav-link" href="{{ route('departamentos.index') }}">Departamentos</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="#">Usuários</a>
